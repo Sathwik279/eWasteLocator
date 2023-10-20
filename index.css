@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius:2rem;
+ 
+ 
+}
+
+h2{
+  font-size:3rem;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 1vh;
+  display: grid;
+  font-size: 2rem;
+  grid-template-rows: 900px;
+  grid-template-columns:minmax(30em,auto);
+  padding: 15rem;
+  background-image: url(images/leaves.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.header {
+  grid-row: 1/1;
+ 
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+
+}
+
+.menuBar {
+  grid-row: 1/1;
+  display: grid;
+  background-color: #fbd0da;
+  /* grid auto flow just assign the item along the row or column automatically */
+  /* grid-auto-flow:column; */
+  /* this below telll the fraction with which each item in the column in the grid occupies along the column wise */
+  grid-template-columns: 0.5fr 4fr 1fr 1fr;
+  /* this tell the height of each peice minmax tell about the min height of each item*/
+  grid-auto-rows: minmax(5px, auto);
+  /* just tells the column gap */
+  column-gap: 1em;
+}
+.contentPane {
+  background-image: url(images/ewaste2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: 2/10;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  place-content: center;
+  margin:0;
+}
+.contentPaneContent {
+  color: rgba(255, 249, 249, 0.984);
+  text-align: center;
+  grid-column: 1/1;
+
+  font-weight: bolder;
+  font-style: oblique;
+  font-size: 2.5em;
+  background-color: rgba(255, 0, 127, 0.3);
+  display: grid;
+  place-content: center;
+  margin: 0;
+  transition:background-color 2s;
+  border-radius:2rem;
+  
+}
+.contentPaneContent:hover{
+  background-color:#ac486192;
+  
+}
+.box {
+ 
+  font-size: 2rem;
+}
+/* this belo is a pseudo selector and selects the first child of the box class as box class is given to multiple tags */
+.box:first-child {
+  /* background-color: blue; */
+  /* grid-column-start:1;
+   grid-column-end:3; */
+  /* grid-column:1/4;
+   grid-row:1/3; */
+  /* my options */
+ 
+ 
+}
+/* this be;ow thingthe second child in the box class */
+.box:nth-child(2) {
+  /* background-color: red;
+    grid-column:1/5; */
+  /* grid-row:3/4; */
+  
+}
+.box:nth-child(3) {
+  /* background-color: red;
+    grid-column:1/5; */
+  /* grid-row:3/4; */
+
+  color: #5f071c;
+
+  /* this below thing is the magic used in grid layout to center thing  */
+  display: grid;
+  place-content: center;
+}
+.box:nth-child(4) {
+  /* background-color: red;
+    grid-column:1/5; */
+  /* grid-row:3/4; */
+
+  color: #5f071c;
+
+  display: grid;
+  place-content: center;
+}
+.btn {
+  background-color: #197c71;
+  font-size: 2rem;
+  padding: 1rem;
+  margin: 0;
+ 
+}
+#email {
+  background-color: #eaa97b;
+}
+.dropdown-menu a {
+  font-size: 2rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+.content {
+  
+  border: 3px solid pink;
+  padding: 2rem;
+  margin-top: 2rem;
+  grid-row: 2/2;
+  background-color: rgba(240, 255, 255, 0.494);
+
+}
+.tags{
+  transition:font-size 0.5s;
+}
+.tags:hover{
+  color:#5f071c;
+  font-size:2.5rem;
+}
+footer {
+  
+  border: 3px solid pink;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  grid-row: 3/3;
+  color: rgb(212, 144, 144);
+  background-color: rgba(0, 0, 0, 0.446);
+}
+input::placeholder{
+    color:black;
+    padding-left:0.9rem;
+}
